@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+   bind9:
+     
+     image: docker pull ubuntu/bind9
+     container_name: bind9
+     environment: 
+        - TZ=UTC
+     ports:
+        - 53:53 
+
+     volumes:
+       - bind/named.conf:/etc/bind/named.conf
+       - cache/bind:/var/cache/bind
+       - lib/bind:/var/lib/bind
+    
