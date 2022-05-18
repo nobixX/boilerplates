@@ -11,7 +11,7 @@ services:
         - 53:53 
 
      volumes:
-       - /bind/named.conf:/etc/bind/named.conf
-       - /cache/bind:/var/cache/bind
-       - /lib/bind:/var/lib/bind
+       - ./named.conf:/etc/bind/named.conf
+       - ./bind:/var/cache/bind
+       - ./bind:/var/lib/bind
     
